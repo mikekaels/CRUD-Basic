@@ -34,6 +34,6 @@ public class DiscoveriesRouter: DiscoveriesPresenterToRouterProtocol{
     
     func goToDetails(id: Int, from: DiscoveriesVC) {
         let vc = DetailsRouter().createModule()
-        from.present(vc, animated: true, completion: nil)
+        from.navigationController?.pushViewController(vc, animated: true)
     }
 }

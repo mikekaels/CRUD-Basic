@@ -20,6 +20,7 @@ class PostTableViewCell: UITableViewCell {
     private let ivPost = UIImageView()
         .configure { v in
             v.layer.cornerRadius = 10
+            v.contentMode = .scaleAspectFill
             v.layer.masksToBounds = true
             v.kf.setImage(with: URL(string: "https://images.unsplash.com/photo-1502810365585-56ffa361fdde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"))
         }
@@ -35,6 +36,7 @@ class PostTableViewCell: UITableViewCell {
     private let ivUser = UIImageView()
         .configure { v in
             v.layer.cornerRadius = 10
+            v.contentMode = .scaleAspectFill
             v.layer.masksToBounds = true
             v.kf.setImage(with: URL(string: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"))
         }
@@ -70,6 +72,8 @@ class PostTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        self.selectionStyle = .none
         setupUI()
     }
 
@@ -114,7 +118,7 @@ extension PostTableViewCell {
         
         background.addSubview(ivTime)
         ivTime.snp.makeConstraints { make in
-            make.width.height.equalTo(20)
+            make.width.height.equalTo(17)
             make.centerY.equalTo(ivUser)
             make.leading.equalTo(lblUser.snp_trailingMargin).offset(30)
         }
