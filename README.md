@@ -93,7 +93,7 @@ pod install
 ![This is an image](https://i.ibb.co/RhvHfGX/Screen-Shot-2022-03-03-at-03-26-02.png)
 open the file
 ### 4. Run
-![This is an image](https://i.ibb.co/98GNPjQ/Screen-Shot-2022-02-12-at-13-11-31.png)
+![This is an image](https://i.ibb.co/y0mzprX/Screen-Shot-2022-03-03-at-03-26-29.png)
 Select the simulator or device
 and Run the project!
 ### 5. Done
