@@ -12,6 +12,7 @@ import Kingfisher
 class PostTableViewCell: UITableViewCell {
     
     private var id = 0
+    private var saved = false
     
     private let background = UIView()
         .configure { v in
@@ -83,9 +84,10 @@ class PostTableViewCell: UITableViewCell {
 
 extension PostTableViewCell {
     
-    func cellConfig(id: Int, title: String) {
+    func cellConfig(id: Int, title: String, saved: Bool) {
         self.lblTitle.text = title
         self.id = id
+        self.saved = saved
     }
     
     func setupUI() {

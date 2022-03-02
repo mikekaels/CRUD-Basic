@@ -6,6 +6,7 @@
 
 public protocol DetailsDelegate {
     func didDeletePost()
+    func didRemoveFromFavorite()
 }
 
 protocol DetailsViewToPresenterProtocol: AnyObject {
@@ -17,6 +18,8 @@ protocol DetailsViewToPresenterProtocol: AnyObject {
     func goToEdit(id: Int, title: String, content: String, from: DetailsVC)
     func getDetailPost(id: Int)
     func deletePost(id: Int)
+    func saveToFavorite(id: Int)
+    func removeFromFavorite(id: Int)
 }
 
 protocol DetailsPresenterToRouterProtocol: AnyObject {
@@ -30,15 +33,21 @@ protocol DetailsPresenterToViewProtocol: AnyObject {
     func didFailedFetchDetailPost(error: CustomError)
     func didSuccessDeletePost(post: Post)
     func didFailedDeletePost(error: CustomError)
+    func didSaveToFavorite(success: Bool)
+    func didRemoveFromFavorite(success: Bool)
 }
 
 protocol DetailsInteractorToPresenterProtocol: AnyObject {
     func didFetchDetailPost(result: Result<Post, CustomError>)
     func didDeletePost(result: Result<Post, CustomError>)
+    func didSaveToFavorite(success: Bool)
+    func didRemoveFromFavorite(success: Bool)
 }
 
 protocol DetailsPresenterToInteractorProtocol: AnyObject {
     var presenter: DetailsInteractorToPresenterProtocol? { get set }
     func getDetailPost(id: Int)
     func deletePost(id: Int)
+    func saveToFavorite(id: Int)
+    func removeFromFavorite(id: Int)
 }

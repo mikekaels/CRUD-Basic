@@ -13,6 +13,7 @@ class DetailsVC: UIViewController {
     public var delegate: DetailsDelegate?
     
     var id = 0
+    var saved: Bool = false
     
     private let scrollView = UIScrollView()
         .configure { v in
@@ -53,16 +54,16 @@ class DetailsVC: UIViewController {
                 make.top.leading.trailing.bottom.equalTo(v)
             })
             v.addTarget(self, action: #selector(back), for: .touchUpInside)
-            v.tintColor = Colors.subTitle
+            v.tintColor = Colors.accent
         }
     
-    private let btnFavorite = UIButton()
+    let btnFavorite = UIButton()
         .configure { v in
             v.imageView?.contentMode = .scaleAspectFill
             v.setImage(UIImage(systemName: "bookmark"), for: .normal)
             
             v.addTarget(self, action: #selector(savedTapped), for: .touchUpInside)
-            v.tintColor = Colors.subTitle
+            v.tintColor = Colors.accent
             
             v.snp.makeConstraints { make in
                 make.height.width.equalTo(22)
@@ -78,7 +79,7 @@ class DetailsVC: UIViewController {
             v.imageView?.contentMode = .scaleAspectFill
             v.setImage(UIImage(systemName: "trash"), for: .normal)
             v.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
-            v.tintColor = Colors.subTitle
+            v.tintColor = Colors.accent
             
             v.snp.makeConstraints { make in
                 make.height.width.equalTo(22)
@@ -93,7 +94,7 @@ class DetailsVC: UIViewController {
             v.imageView?.contentMode = .scaleAspectFill
             v.setImage(UIImage(systemName: "pencil"), for: .normal)
             v.addTarget(self, action: #selector(editTapped), for: .touchUpInside)
-            v.tintColor = Colors.subTitle
+            v.tintColor = Colors.accent
             v.snp.makeConstraints { make in
                 make.height.width.equalTo(22)
             }
@@ -135,6 +136,7 @@ class DetailsVC: UIViewController {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        changeBookmark()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -152,7 +154,16 @@ class DetailsVC: UIViewController {
     }
     
     @objc func savedTapped() {
-        print("Save tapped...")
+        if saved {
+            saved = false
+            presentor?.removeFromFavorite(id: self.id)
+            delegate?.didRemoveFromFavorite()
+        } else {
+            saved = true
+            presentor?.saveToFavorite(id: self.id)
+            delegate?.didRemoveFromFavorite()
+        }
+        changeBookmark()
     }
     
     @objc func deleteTapped() {
@@ -163,9 +174,25 @@ class DetailsVC: UIViewController {
         presentor?.goToEdit(id: self.id, title: lblTitle.text!, content: lblDescription.text!, from: self)
     }
 
+    func changeBookmark() {
+        if saved {
+            btnFavorite.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+        } else {
+            btnFavorite.setImage(UIImage(systemName: "bookmark"), for: .normal)
+        }
+    }
 }
 
 extension DetailsVC: DetailsPresenterToViewProtocol, EditDelegate {
+    
+    func didRemoveFromFavorite(success: Bool) {
+        changeBookmark()
+    }
+
+    func didSaveToFavorite(success: Bool) {
+        changeBookmark()
+    }
+    
     func didSuccessDeletePost(post: Post) {
         self.delegate?.didDeletePost()
         back()
@@ -189,6 +216,7 @@ extension DetailsVC: DetailsPresenterToViewProtocol, EditDelegate {
     func didFailedDeletePost(error: CustomError) {
         print(error)
     }
+    
     
     
 }

@@ -32,10 +32,11 @@ public class DiscoveriesRouter: DiscoveriesPresenterToRouterProtocol{
         return view
     }
     
-    func goToDetails(id: Int, from: DiscoveriesVC) {
+    func goToDetails(id: Int, state: Bool, from: DiscoveriesVC) {
         let vc = DetailsRouter().createModule()
         vc.delegate = from
         vc.id = id
+        vc.saved = state
         from.navigationController?.pushViewController(vc, animated: true)
     }
     

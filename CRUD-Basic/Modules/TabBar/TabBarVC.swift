@@ -59,6 +59,7 @@ class TabBarVC: UITabBarController {
         navController.navigationBar.shadowImage = UIImage()
         
         navController.navigationBar.layer.borderColor = .none
+        navController.navigationBar.tintColor = Colors.accent
         navController.navigationBar.standardAppearance = appearance
         navController.navigationBar.scrollEdgeAppearance = appearance
         

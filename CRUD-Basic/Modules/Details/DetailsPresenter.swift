@@ -24,9 +24,26 @@ class DetailsPresenter: DetailsViewToPresenterProtocol {
     func deletePost(id: Int) {
         interactor?.deletePost(id: id)
     }
+    
+    func saveToFavorite(id: Int) {
+        interactor?.saveToFavorite(id: id)
+    }
+    
+    func removeFromFavorite(id: Int) {
+        interactor?.removeFromFavorite(id: id)
+    }
 }
 
 extension DetailsPresenter: DetailsInteractorToPresenterProtocol {
+    
+    func didRemoveFromFavorite(success: Bool) {
+        view?.didRemoveFromFavorite(success: success)
+    }
+    
+    func didSaveToFavorite(success: Bool) {
+        view?.didSaveToFavorite(success: success)
+    }
+    
     func didDeletePost(result: Result<Post, CustomError>) {
         switch result {
         case .success(let post):

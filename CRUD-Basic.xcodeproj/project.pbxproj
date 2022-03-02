@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC78A14FF2C4A918289BF032 /* Pods_CRUD_Basic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8D3AD83E18E586D9A58627 /* Pods_CRUD_Basic.framework */; };
+		BD71A5E927CFE7B800DA8CCB /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71A5E827CFE7B800DA8CCB /* UserDefaults.swift */; };
 		BDC03A0327CE4D9400199D54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A0227CE4D9400199D54 /* AppDelegate.swift */; };
 		BDC03A0527CE4D9400199D54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A0427CE4D9400199D54 /* SceneDelegate.swift */; };
 		BDC03A0C27CE4D9600199D54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC03A0B27CE4D9600199D54 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		61DC69AD505FD32BA41E1181 /* Pods-CRUD-Basic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRUD-Basic.release.xcconfig"; path = "Target Support Files/Pods-CRUD-Basic/Pods-CRUD-Basic.release.xcconfig"; sourceTree = "<group>"; };
 		78640C57230A658B92C1F1AD /* Pods-CRUD-Basic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRUD-Basic.debug.xcconfig"; path = "Target Support Files/Pods-CRUD-Basic/Pods-CRUD-Basic.debug.xcconfig"; sourceTree = "<group>"; };
 		8B8D3AD83E18E586D9A58627 /* Pods_CRUD_Basic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRUD_Basic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD71A5E827CFE7B800DA8CCB /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		BDC039FF27CE4D9400199D54 /* CRUD-Basic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CRUD-Basic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC03A0227CE4D9400199D54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDC03A0427CE4D9400199D54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				BDC03A3727CE57BE00199D54 /* Colors.swift */,
 				BDC03A7427CF706000199D54 /* Reachability.swift */,
 				BDC03A7627CF708B00199D54 /* Alertable.swift */,
+				BD71A5E827CFE7B800DA8CCB /* UserDefaults.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				BDC03A3627CE564700199D54 /* Post.swift in Sources */,
 				BDC03A7D27CF70CD00199D54 /* APIManager.swift in Sources */,
 				BDC03A6F27CF68CA00199D54 /* EditInteractor.swift in Sources */,
+				BD71A5E927CFE7B800DA8CCB /* UserDefaults.swift in Sources */,
 				BDC03A3327CE557E00199D54 /* Configures.swift in Sources */,
 				BDC03A5327CE8EA400199D54 /* TabBarModels.swift in Sources */,
 				BDC03A5127CE8EA400199D54 /* TabBarPresenter.swift in Sources */,

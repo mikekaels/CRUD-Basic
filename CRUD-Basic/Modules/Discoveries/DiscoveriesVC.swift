@@ -11,23 +11,33 @@ class DiscoveriesVC: UIViewController {
     var presentor: DiscoveriesViewToPresenterProtocol?
     public var delegate: DiscoveriesDelegate?
     
+    var savedPost: [Int] = [Int]()
+    
     let refreshControl = UIRefreshControl()
         .configure { v in
-            v.addTarget(self, action: #selector(fetchPosts), for: .valueChanged)
+            v.addTarget(self, action: #selector(fetchFavorite), for: .valueChanged)
             v.tintColor = Colors.title
         }
     
     lazy var table = PostTableViewController(items: [], configure: { (cell: PostTableViewCell, item: Post) in
-        cell.cellConfig(id: item.id!, title: item.title!)
+
+        cell.cellConfig(id: item.id!, title: item.title!, saved: false)
+        
     }) { (item) in
-        self.presentor?.goToDetails(id: item.id!, from: self)
+        var state = false
+        for i in self.savedPost {
+            if i == item.id {
+                state = true
+            }
+        }
+        self.presentor?.goToDetails(id: item.id!, state: state, from: self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Posts"
         setupUI()
-        fetchPosts()
+        fetchFavorite()
         table.tableView.addSubview(refreshControl)
     }
     
@@ -38,15 +48,28 @@ class DiscoveriesVC: UIViewController {
     @objc func fetchPosts() {
         presentor?.getAllPost()
     }
+    
+    @objc func fetchFavorite() {
+        presentor?.fetchFavorite()
+    }
 }
 
 extension DiscoveriesVC: DiscoveriesPresenterToViewProtocol, EditDelegate, DetailsDelegate {
-    func didDeletePost() {
+    func didFetchFavorite(ids: [Int]) {
+        self.savedPost = ids
         fetchPosts()
     }
     
+    func didRemoveFromFavorite() {
+        fetchFavorite()
+    }
+    
+    func didDeletePost() {
+        fetchFavorite()
+    }
+    
     func didSuccessCreateOrUpdatePost() {
-        fetchPosts()
+        fetchFavorite()
     }
     
     func didFetchAllPost(allPost: [Post]) {

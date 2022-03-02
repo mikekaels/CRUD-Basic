@@ -14,4 +14,9 @@ extension DiscoveriesInteractor {
             self?.presenter?.didFetchAllPost(result: result)
         }
     }
+    
+    func fetchFavorite() {
+        let result = UserDefaultManager.shared.getPosts()
+        presenter?.didFetchFavorite(ids: result)
+    }
 }

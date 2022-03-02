@@ -20,5 +20,17 @@ extension DetailsInteractor {
             self?.presenter?.didDeletePost(result: result)
         }
     }
+    
+    func saveToFavorite(id: Int) {
+        UserDefaultManager.shared.savePost(id: id) { [weak self] result in
+            self?.presenter?.didSaveToFavorite(success: result)
+        }
+    }
+    
+    func removeFromFavorite(id: Int) {
+        UserDefaultManager.shared.removePost(id: id) { result in
+            self.presenter?.didRemoveFromFavorite(success: result)
+        }
+    }
 }
 

@@ -9,8 +9,8 @@ class DiscoveriesPresenter: DiscoveriesViewToPresenterProtocol {
     var router: DiscoveriesPresenterToRouterProtocol?
     var interactor: DiscoveriesPresenterToInteractorProtocol?
     
-    func goToDetails(id: Int, from: DiscoveriesVC) {
-        router?.goToDetails(id: id, from: from)
+    func goToDetails(id: Int, state: Bool, from: DiscoveriesVC) {
+        router?.goToDetails(id: id, state: state, from: from)
     }
     
     func getAllPost() {
@@ -19,6 +19,10 @@ class DiscoveriesPresenter: DiscoveriesViewToPresenterProtocol {
     
     func goToCreate(from: DiscoveriesVC) {
         router?.goToCreate(from: from)
+    }
+    
+    func fetchFavorite() {
+        interactor?.fetchFavorite()
     }
 
 }
@@ -31,5 +35,9 @@ extension DiscoveriesPresenter: DiscoveriesInteractorToPresenterProtocol {
         case .failure(let err):
             print(err)
         }
+    }
+    
+    func didFetchFavorite(ids: [Int]) {
+        view?.didFetchFavorite(ids: ids)
     }
 }
