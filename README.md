@@ -77,8 +77,8 @@ Using [Alamofire](https://github.com/Alamofire/Alamofire) to manage the request
 ## Getting Started
 ### 1. Clone this project
 You can clone the project by Http or Ssh on your terminal
-- HTTP ``` git clone https://github.com/mikekaels/PokemonCard.git ```
-- SSH ``` git clone git@github.com:mikekaels/PokemonCard.git ```
+- HTTP ``` git clone https://github.com/mikekaels/CRUD-Basic.git ```
+- SSH ``` git clone git@github.com:mikekaels/CRUD-Basic.git ```
 - Or [download the project](https://github.com/mikekaels/PokemonCard/archive/refs/heads/main.zip)
 ### 2. Instalation
 Make sure you have installed [cocoapods](https://cocoapods.org/) on your machine, if not please do this command in your Terminal: 
