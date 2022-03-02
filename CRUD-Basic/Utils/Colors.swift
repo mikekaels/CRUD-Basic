@@ -13,4 +13,5 @@ public enum Colors {
     static let background = UIColor.init("#F2F4F5")
     static let cellBackground = UIColor.init("#FFFFFF")
     static let accent = UIColor.init("#4A6147")
+    static let accentRed = UIColor.init("#CA4A42")
 }

@@ -44,6 +44,17 @@
 		BDC03A6227CE8FDB00199D54 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A5C27CE8FDB00199D54 /* FavoritesInteractor.swift */; };
 		BDC03A6327CE8FDB00199D54 /* FavoritesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A5D27CE8FDB00199D54 /* FavoritesProtocol.swift */; };
 		BDC03A6427CE8FDB00199D54 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A5E27CE8FDB00199D54 /* FavoritesVC.swift */; };
+		BDC03A6C27CF68CA00199D54 /* EditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A6627CF68CA00199D54 /* EditPresenter.swift */; };
+		BDC03A6D27CF68CA00199D54 /* EditRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A6727CF68CA00199D54 /* EditRouter.swift */; };
+		BDC03A6E27CF68CA00199D54 /* EditModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A6827CF68CA00199D54 /* EditModels.swift */; };
+		BDC03A6F27CF68CA00199D54 /* EditInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A6927CF68CA00199D54 /* EditInteractor.swift */; };
+		BDC03A7027CF68CA00199D54 /* EditProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A6A27CF68CA00199D54 /* EditProtocol.swift */; };
+		BDC03A7127CF68CA00199D54 /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A6B27CF68CA00199D54 /* EditVC.swift */; };
+		BDC03A7527CF706000199D54 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A7427CF706000199D54 /* Reachability.swift */; };
+		BDC03A7727CF708B00199D54 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A7627CF708B00199D54 /* Alertable.swift */; };
+		BDC03A7927CF70A800199D54 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A7827CF70A800199D54 /* Router.swift */; };
+		BDC03A7B27CF70B900199D54 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A7A27CF70B900199D54 /* Service.swift */; };
+		BDC03A7D27CF70CD00199D54 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC03A7C27CF70CD00199D54 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +99,17 @@
 		BDC03A5C27CE8FDB00199D54 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
 		BDC03A5D27CE8FDB00199D54 /* FavoritesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProtocol.swift; sourceTree = "<group>"; };
 		BDC03A5E27CE8FDB00199D54 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
+		BDC03A6627CF68CA00199D54 /* EditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPresenter.swift; sourceTree = "<group>"; };
+		BDC03A6727CF68CA00199D54 /* EditRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRouter.swift; sourceTree = "<group>"; };
+		BDC03A6827CF68CA00199D54 /* EditModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModels.swift; sourceTree = "<group>"; };
+		BDC03A6927CF68CA00199D54 /* EditInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInteractor.swift; sourceTree = "<group>"; };
+		BDC03A6A27CF68CA00199D54 /* EditProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProtocol.swift; sourceTree = "<group>"; };
+		BDC03A6B27CF68CA00199D54 /* EditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
+		BDC03A7427CF706000199D54 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		BDC03A7627CF708B00199D54 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		BDC03A7827CF70A800199D54 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BDC03A7A27CF70B900199D54 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		BDC03A7C27CF70CD00199D54 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +162,7 @@
 		BDC03A0127CE4D9400199D54 /* CRUD-Basic */ = {
 			isa = PBXGroup;
 			children = (
+				BDC03A7227CF702900199D54 /* Core */,
 				BDC03A3127CE555A00199D54 /* Extensions */,
 				BDC03A2E27CE54AF00199D54 /* Utils */,
 				BDC03A1727CE4DD500199D54 /* Commons */,
@@ -154,6 +177,7 @@
 		BDC03A1627CE4DCA00199D54 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BDC03A6527CF68BD00199D54 /* Edit */,
 				BDC03A5827CE8FCD00199D54 /* Favorites */,
 				BDC03A4A27CE8E9400199D54 /* TabBar */,
 				BDC03A3D27CE8C9E00199D54 /* Details */,
@@ -217,6 +241,8 @@
 				BDC03A2F27CE54BC00199D54 /* Identifiers.swift */,
 				BDC03A3227CE557E00199D54 /* Configures.swift */,
 				BDC03A3727CE57BE00199D54 /* Colors.swift */,
+				BDC03A7427CF706000199D54 /* Reachability.swift */,
+				BDC03A7627CF708B00199D54 /* Alertable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -275,6 +301,29 @@
 				BDC03A5E27CE8FDB00199D54 /* FavoritesVC.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		BDC03A6527CF68BD00199D54 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				BDC03A6627CF68CA00199D54 /* EditPresenter.swift */,
+				BDC03A6727CF68CA00199D54 /* EditRouter.swift */,
+				BDC03A6827CF68CA00199D54 /* EditModels.swift */,
+				BDC03A6927CF68CA00199D54 /* EditInteractor.swift */,
+				BDC03A6A27CF68CA00199D54 /* EditProtocol.swift */,
+				BDC03A6B27CF68CA00199D54 /* EditVC.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		BDC03A7227CF702900199D54 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BDC03A7827CF70A800199D54 /* Router.swift */,
+				BDC03A7A27CF70B900199D54 /* Service.swift */,
+				BDC03A7C27CF70CD00199D54 /* APIManager.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,12 +444,16 @@
 				BDC03A6327CE8FDB00199D54 /* FavoritesProtocol.swift in Sources */,
 				BDC03A2527CE511900199D54 /* DiscoveriesProtocol.swift in Sources */,
 				BDC03A6227CE8FDB00199D54 /* FavoritesInteractor.swift in Sources */,
+				BDC03A6E27CF68CA00199D54 /* EditModels.swift in Sources */,
 				BDC03A2327CE511900199D54 /* DiscoveriesModels.swift in Sources */,
+				BDC03A6C27CF68CA00199D54 /* EditPresenter.swift in Sources */,
 				BDC03A0327CE4D9400199D54 /* AppDelegate.swift in Sources */,
 				BDC03A6427CE8FDB00199D54 /* FavoritesVC.swift in Sources */,
 				BDC03A3827CE57BE00199D54 /* Colors.swift in Sources */,
 				BDC03A0527CE4D9400199D54 /* SceneDelegate.swift in Sources */,
 				BDC03A3627CE564700199D54 /* Post.swift in Sources */,
+				BDC03A7D27CF70CD00199D54 /* APIManager.swift in Sources */,
+				BDC03A6F27CF68CA00199D54 /* EditInteractor.swift in Sources */,
 				BDC03A3327CE557E00199D54 /* Configures.swift in Sources */,
 				BDC03A5327CE8EA400199D54 /* TabBarModels.swift in Sources */,
 				BDC03A5127CE8EA400199D54 /* TabBarPresenter.swift in Sources */,
@@ -418,13 +471,20 @@
 				BDC03A4727CE8CBE00199D54 /* DetailsInteractor.swift in Sources */,
 				BDC03A5F27CE8FDB00199D54 /* FavoritesPresenter.swift in Sources */,
 				BDC03A2227CE511900199D54 /* DiscoveriesRouter.swift in Sources */,
+				BDC03A7927CF70A800199D54 /* Router.swift in Sources */,
+				BDC03A7127CF68CA00199D54 /* EditVC.swift in Sources */,
 				BDC03A5227CE8EA400199D54 /* TabBarRouter.swift in Sources */,
+				BDC03A7527CF706000199D54 /* Reachability.swift in Sources */,
 				BDC03A4827CE8CBE00199D54 /* DetailsProtocol.swift in Sources */,
 				BDC03A2627CE511900199D54 /* DiscoveriesVC.swift in Sources */,
 				BDC03A3027CE54BC00199D54 /* Identifiers.swift in Sources */,
+				BDC03A7727CF708B00199D54 /* Alertable.swift in Sources */,
 				BDC03A5527CE8EA400199D54 /* TabBarProtocol.swift in Sources */,
 				BDC03A3A27CE57DD00199D54 /* Extension + UIColor.swift in Sources */,
+				BDC03A6D27CF68CA00199D54 /* EditRouter.swift in Sources */,
+				BDC03A7B27CF70B900199D54 /* Service.swift in Sources */,
 				BDC03A4927CE8CBE00199D54 /* DetailsVC.swift in Sources */,
+				BDC03A7027CF68CA00199D54 /* EditProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

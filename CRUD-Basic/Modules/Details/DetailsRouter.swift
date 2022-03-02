@@ -31,4 +31,19 @@ public class DetailsRouter: DetailsPresenterToRouterProtocol{
         
         return view
     }
+    
+    func back(from: DetailsVC) {
+        from.navigationController?.popViewController(animated: true)
+    }
+    
+    func goToEdit(id: Int, title: String, content: String, from: DetailsVC) {
+        let vc = EditRouter().createModule()
+        vc.id = id
+        vc.title = "Edit Post"
+        vc.buttonState = "Update"
+        vc.tfTitle.text = title
+        vc.tfContent.text = content
+        vc.delegate = from
+        from.navigationController?.pushViewController(vc, animated: true)
+    }
 }

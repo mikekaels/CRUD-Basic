@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 struct Post: Codable {
     let id: Int?

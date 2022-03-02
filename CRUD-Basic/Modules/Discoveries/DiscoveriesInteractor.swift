@@ -7,3 +7,11 @@
 class DiscoveriesInteractor: DiscoveriesPresenterToInteractorProtocol {
     weak var presenter: DiscoveriesInteractorToPresenterProtocol?
 }
+
+extension DiscoveriesInteractor {
+    func getAllPost() {
+        APIManager.shared.fetchAllPost { [weak self] result in
+            self?.presenter?.didFetchAllPost(result: result)
+        }
+    }
+}

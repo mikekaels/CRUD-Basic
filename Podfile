@@ -9,4 +9,5 @@ target 'CRUD-Basic' do
   pod 'Alamofire', '~> 5.5'
   pod 'SnapKit', '~> 5.0.0'
   pod 'Kingfisher'
+  pod 'IQKeyboardManagerSwift'
 end

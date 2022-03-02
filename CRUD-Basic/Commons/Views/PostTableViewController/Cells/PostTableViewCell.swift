@@ -11,6 +11,8 @@ import Kingfisher
 
 class PostTableViewCell: UITableViewCell {
     
+    private var id = 0
+    
     private let background = UIView()
         .configure { v in
             v.backgroundColor = Colors.cellBackground
@@ -80,6 +82,12 @@ class PostTableViewCell: UITableViewCell {
 }
 
 extension PostTableViewCell {
+    
+    func cellConfig(id: Int, title: String) {
+        self.lblTitle.text = title
+        self.id = id
+    }
+    
     func setupUI() {
         backgroundColor = .clear
         

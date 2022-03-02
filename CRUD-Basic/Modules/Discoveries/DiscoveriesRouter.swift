@@ -34,6 +34,16 @@ public class DiscoveriesRouter: DiscoveriesPresenterToRouterProtocol{
     
     func goToDetails(id: Int, from: DiscoveriesVC) {
         let vc = DetailsRouter().createModule()
+        vc.delegate = from
+        vc.id = id
+        from.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func goToCreate(from: DiscoveriesVC) {
+        let vc = EditRouter().createModule()
+        vc.title = "New Post"
+        vc.buttonState = "Create"
+        vc.delegate = from
         from.navigationController?.pushViewController(vc, animated: true)
     }
 }

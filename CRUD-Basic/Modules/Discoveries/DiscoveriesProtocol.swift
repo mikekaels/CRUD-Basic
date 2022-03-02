@@ -14,22 +14,25 @@ protocol DiscoveriesViewToPresenterProtocol: AnyObject {
     var router: DiscoveriesPresenterToRouterProtocol? { get set }
     
     func goToDetails(id: Int, from: DiscoveriesVC)
+    func getAllPost()
+    func goToCreate(from: DiscoveriesVC)
 }
 
 protocol DiscoveriesPresenterToRouterProtocol: AnyObject {
     func createModule() -> DiscoveriesVC
     func goToDetails(id: Int, from: DiscoveriesVC)
+    func goToCreate(from: DiscoveriesVC)
 }
 
 protocol DiscoveriesPresenterToViewProtocol: AnyObject {
-
+    func didFetchAllPost(allPost: [Post])
 }
 
 protocol DiscoveriesInteractorToPresenterProtocol: AnyObject {
-
+    func didFetchAllPost(result: Result<[Post], CustomError>)
 }
 
 protocol DiscoveriesPresenterToInteractorProtocol: AnyObject {
     var presenter: DiscoveriesInteractorToPresenterProtocol? { get set }
-
+    func getAllPost()
 }
