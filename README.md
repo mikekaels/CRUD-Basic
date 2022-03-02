@@ -90,7 +90,7 @@ If you already install cocoapods, in your terminal go to inside the project dire
 pod install
 ```
 ### 3. Open the .xcworkspace file
-![This is an image](https://i.ibb.co/WkFcwjQ/Screen-Shot-2022-02-12-at-13-09-25.png)
+![This is an image](https://i.ibb.co/RhvHfGX/Screen-Shot-2022-03-03-at-03-26-02.png)
 open the file
 ### 4. Run
 ![This is an image](https://i.ibb.co/98GNPjQ/Screen-Shot-2022-02-12-at-13-11-31.png)
